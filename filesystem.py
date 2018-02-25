@@ -1,16 +1,15 @@
-#!/usr/bin/env python
 from __future__ import print_function, absolute_import, division
-from myredis import MyRedis
-r = MyRedis('localhost', 6379, '')
 
 import logging
-
 from collections import defaultdict
 from errno import ENOENT
 from stat import S_IFDIR, S_IFLNK, S_IFREG
 from time import time
 
 from fuse import FUSE, FuseOSError, Operations, LoggingMixIn
+
+from myredis import MyRedis
+r = MyRedis('localhost', 6379, '')
 
 if not hasattr(__builtins__, 'bytes'):
     bytes = str

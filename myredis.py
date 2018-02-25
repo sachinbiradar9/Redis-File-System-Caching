@@ -32,7 +32,7 @@ class MyRedis(redis.Redis):
         self.rename(old_key, new_key)
         self.rename(old_key+':time_created', new_key+':time_created')
         if self.get(old_key+':last_accessed'):
-            self.rename(old_key+':last_accessed', new_key+':last_acessed')
+            self.rename(old_key+':last_accessed', new_key+':last_accessed')
 
     def get_info(self, pattern=''):
         data = {}

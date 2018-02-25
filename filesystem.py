@@ -60,7 +60,7 @@ class Memory(LoggingMixIn, Operations):
     def read(self, path, size, offset, fh):
         data = r.my_get(path)
         if data:
-            #print ("cache hit")
+            print ("cache hit")
             return data
         else:
             print ("cache miss")

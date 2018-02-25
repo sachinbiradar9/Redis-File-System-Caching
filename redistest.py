@@ -1,3 +1,4 @@
+from datetime import datetime
 from myredis import MyRedis
 ########
 def y():
@@ -12,7 +13,9 @@ def c():
     print "im prehook of delete"
 
 x = MyRedis('localhost', 6379, '')
-#x.myset('motasim', 'mohammad', y, z)
-x.myget('qw', a)
+#x.my_set('motasim', 'mohammad', y, z)
+x.my_get('qw', a)
 #x.my_delete('foo', c)
+d = str(datetime.utcnow())
+x.delete_older(d)
 print x.get_info()

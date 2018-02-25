@@ -69,10 +69,12 @@ class Memory(LoggingMixIn, Operations):
             return data
 
     def write(self, path, data, offset, fh):
-        print ("here")
+        print ("in write")
         self.data[path] = self.data[path][:offset] + data
         self.files[path]['st_size'] = len(self.data[path])
-        r.my_set(path, data)
+        print (path, '/.' in path)
+        if not ('/.' in path):
+            r.my_set(path, data)
         print ("saved in cache")
         return len(data)
 

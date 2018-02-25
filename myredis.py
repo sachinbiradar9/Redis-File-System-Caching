@@ -50,3 +50,16 @@ class MyRedis(redis.Redis):
                     data[key] = {}
                 data[key]['value'] = self.get(key)
         return data
+
+    def delete_older(self, datetime_x, flag=0):
+        info = self.get_info()
+        if flag == 0:
+            to_search = 'last_accessed'
+        else:
+            to_search = 'time_created'
+        datetime_x = datetime.strptime(datetime_x,'%Y-%m-%d  %H:%M:%S.%f')
+        for key in list(info.keys()):
+            if info[key].get(to_search)!= None:
+                values = datetime.strptime(info[key][to_search],'%Y-%m-%d  %H:%M:%S.%f')
+                if values< datetime_x:
+                    self.my_delete(key)

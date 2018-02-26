@@ -1,6 +1,6 @@
 # Redis-File-System-Caching
 
-Redis File System Caching is a File System with Redis cache for efficient read operations. A wrapper has been created around Redis for features such as time_created, last_used and optimal cache replacement policy.
+Redis File System Caching is a File System with Redis cache for efficient read operations. A wrapper has been created around Redis for features such as time_created, last_used and optimal cache replacement policy. The performance of read request was seen to be improved by 15%
 
 ## How to run
 clone this repository using
@@ -23,7 +23,7 @@ Now route into mountdir
 
 `cd ../mountdir`
 
-Now try any file operations. The system first tries to fetch data from cacahe, if its a cache miss, then data is fetched from disk and updated onto the cache
+Now try any file operations. The system first tries to fetch data from cache, if its a cache miss, then data is fetched from disk and updated onto the cache
 
 `vim example.txt`
 

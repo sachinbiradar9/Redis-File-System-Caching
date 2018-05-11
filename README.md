@@ -6,7 +6,7 @@ Redis File System Caching is a File System with Redis cache for efficient read o
 `pip install fusepy`
 
 ## Usage
-create a empty directory
+create a empty directory  
 `mkdir mountdir`
 
 Run the caching system  
@@ -16,7 +16,7 @@ Run the caching system
 Now change directory to mountdir  
 `cd ../mountdir`
 
-Try any file operations
+Try any file operations  
 `vim example.txt`  
 `cat example.txt`  
 `rm example.txt`  

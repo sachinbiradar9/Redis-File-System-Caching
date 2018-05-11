@@ -5,10 +5,10 @@ Redis File System Caching is a File System with Redis cache for efficient read o
 
 
 ## Usage
-create a empty directory  
-`mkdir mountdir`
+create a empty directory `mkdir mountdir`
 
-`git clone https://github.com/sachinbiradar9/Redis-File-System-Caching.git`  
+Run the caching system  
+`git clone https://github.com/sachinbiradar9/Redis-File-System-Caching.git`  
 `python filesystem.py ../mountdir/`
 
 Now change directory to mountdir 

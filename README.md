@@ -2,11 +2,11 @@
 Redis File System Caching is a File System with Redis cache for efficient read operations. A wrapper was created around Redis for features such as time_created, last_used and optimal cache replacement policy. The performance of read request for file was seen to be improved by 15%
 
 ## Installation
-`pip install redis`
+`pip install redis`  
 `pip install fusepy`
 
 ## Usage
-create a empty directory  
+create a empty directory
 `mkdir mountdir`
 
 Run the caching system  

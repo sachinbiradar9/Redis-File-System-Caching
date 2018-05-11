@@ -10,7 +10,7 @@ create a empty directory
 `mkdir mountdir`
 
 Run the caching system  
-`git clone https://github.com/sachinbiradar9/Redis-File-System-Caching.git`  
+`git clone https://github.com/sachinbiradar9/Redis-File-System-Caching.git`  
 `python filesystem.py ../mountdir/`
 
 Now change directory to mountdir  
